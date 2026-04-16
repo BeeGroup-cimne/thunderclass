@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ThunderClass — Options</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>ThunderClass</h1>
+    <p class="muted">Configure the AI backend and the folder tree to classify into.</p>
+
+    <label for="baseUrl">API base URL</label>
+    <input type="text" id="baseUrl" placeholder="https://api.openai.com" />
+    <div class="hint">OpenAI-compatible <code>/v1/chat/completions</code> endpoint. Example for a local server: <code>http://thor.local:8004</code></div>
+
+    <label for="apiKey">API key (optional for local endpoints)</label>
+    <input type="password" id="apiKey" placeholder="sk-... or leave blank for local" autocomplete="off" />
+
+    <label for="model">Model</label>
+    <input type="text" id="model" placeholder="gpt-4o-mini" />
+
+    <label for="account">Account to classify into</label>
+    <select id="account"></select>
+    <div class="hint">Choose the account whose subfolders are the classification targets (usually "Local Folders").</div>
+
+    <label for="instructions">Extra classification rules (optional)</label>
+    <textarea id="instructions" rows="8" placeholder="e.g.
+- Invoices and receipts go to &quot;Finance / Receipts&quot;.
+- Anything from @myclient.com goes to &quot;Clients / MyClient&quot;.
+- Newsletters go to &quot;Reading&quot;."></textarea>
+
+    <div class="row">
+      <button id="test" class="secondary">Test endpoint</button>
+      <button id="listFolders" class="secondary">List detected folders</button>
+      <button id="save" class="primary">Save</button>
+    </div>
+
+    <div id="status" class="status"></div>
+    <pre id="folderDump" class="dump"></pre>
+  </div>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

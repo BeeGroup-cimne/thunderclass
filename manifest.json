@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "ThunderClass",
+  "description": "Classify the selected email into one of your Local Folders using an AI agent (OpenAI).",
+  "version": "1.2.0",
+  "author": "You",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "thunderclass@example.local",
+      "strict_min_version": "128.0"
+    }
+  },
+  "permissions": [
+    "messagesRead",
+    "messagesMove",
+    "messagesUpdate",
+    "accountsRead",
+    "menus",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "message_display_action": {
+    "default_title": "ThunderClass",
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png"
+    },
+    "default_popup": "popup/popup.html"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "64": "images/icon-64.png"
+  }
+}

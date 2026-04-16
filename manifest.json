@@ -3,7 +3,7 @@
   "name": "ThunderClass",
   "description": "Classify the selected email into one of your Local Folders using an AI agent (OpenAI).",
   "version": "1.2.0",
-  "author": "You",
+  "author": "Gerard Mor Martinez; David Blanco Bautista",
   "browser_specific_settings": {
     "gecko": {
       "id": "thunderclass@example.local",

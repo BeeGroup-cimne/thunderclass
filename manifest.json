@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "ThunderClass",
   "description": "Classify the selected email into one of your Local Folders using an AI agent (OpenAI).",
-  "version": "1.2.0",
-  "author": "Gerard Mor Martinez; David Blanco Bautista",
+  "version": "1.9.1",
+  "author": "Gerard Mor Martinez and David Blanco Bautista",
   "browser_specific_settings": {
     "gecko": {
       "id": "thunderclass@example.local",
@@ -14,7 +14,9 @@
     "messagesRead",
     "messagesMove",
     "messagesUpdate",
+    "messagesDelete",
     "accountsRead",
+    "accountsFolders",
     "menus",
     "storage"
   ],
@@ -28,8 +30,8 @@
   "message_display_action": {
     "default_title": "ThunderClass",
     "default_icon": {
-      "16": "images/icon-16.png",
-      "32": "images/icon-32.png"
+      "16": "icon-16.png",
+      "32": "icon-32.png"
     },
     "default_popup": "popup/popup.html"
   },
@@ -38,8 +40,8 @@
     "open_in_tab": true
   },
   "icons": {
-    "16": "images/icon-16.png",
-    "32": "images/icon-32.png",
-    "64": "images/icon-64.png"
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "64": "icon-64.png"
   }
 }
